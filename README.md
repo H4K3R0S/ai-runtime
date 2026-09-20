@@ -27,9 +27,10 @@ git clone <THIS-REPO-URL> ~/.local/share/ai-runtime
 ~/.local/share/ai-runtime/runtime.sh install   # npm ci, tsc build, enable services
 ~/.local/share/ai-runtime/runtime.sh status
 ```
-OS tools it expects (install via your package manager): `git`, `node`/`npm`, `python3`,
-`python3-gi`, `gir1.2-gtk-3.0`, `xdotool`. The **qdrant binary** must be placed in
-`vector-dbs/qdrant/` (see that folder's notes) — not shipped in git.
+`runtime.sh install` builds `cell-shell` (`npm ci`), the router (`tsc`), and **auto-downloads
+the qdrant binary** (matching your CPU arch; `QDRANT_VERSION` to override). It skips anything
+already present, so it is safe to re-run. OS tools you install yourself: `git`, `node`/`npm`,
+`python3`, `python3-gi`, `gir1.2-gtk-3.0`, `xdotool`.
 
 ## How domains find it (portable, no hardcoded paths)
 Each domain bundles `bootstrap-ai-runtime.sh` and calls it from `start.sh`. It resolves the
