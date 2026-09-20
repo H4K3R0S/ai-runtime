@@ -1,0 +1,12 @@
+{
+  "name": "ai-runtime",
+  "version": "1.0.0",
+  "description": "Deljeni AI runtime: cell-shell (Electron ljuska), ai-router, qdrant, second-brain",
+  "provides": {
+    "cell-shell": "cell-shell/",
+    "ai-router": "http://127.0.0.1:4800",
+    "qdrant": "http://127.0.0.1:6333",
+    "second-brain": "http://127.0.0.1:4901"
+  },
+  "services": ["ai-router.service", "qdrant.service"]
+}
