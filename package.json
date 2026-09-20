@@ -1,0 +1,11 @@
+{
+  "name": "core-infrastructure",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Zajednička AI infrastruktura: router-api, mcp-servers, vector-dbs (global graph).",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  }
+}

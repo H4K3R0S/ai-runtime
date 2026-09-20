@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+__pycache__/
+*.log
+# podprojekti su zasebni repoi:
+cell-shell/
+second-brain/
+router-api/
+tools/
+vector-dbs/
+mcp-servers/
