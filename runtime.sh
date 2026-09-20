@@ -42,12 +42,35 @@ install() {
   if [ ! -f "$RT/router-api/dist/router-api/router.js" ] && [ -f "$RT/router-api/tsconfig.json" ]; then
     echo "-> router-api: build (tsc)"; (cd "$RT" && command -v npm >/dev/null && npm ci --no-audit --no-fund >/dev/null 2>&1; cd "$RT/router-api" && npx tsc -p tsconfig.json) || echo "  (tsc pao)"
   fi
-  [ -x "$RT/vector-dbs/qdrant/qdrant" ] || echo "-> qdrant binar nedostaje: preuzmi u vector-dbs/qdrant/ (v. README)."
+  _install_qdrant
   # enable servisi ako postoje unit fajlovi
   for s in ai-router qdrant; do
     [ -f "$HOME/.config/systemd/user/$s.service" ] && systemctl --user enable --now "$s.service" 2>/dev/null
   done
   check
+}
+
+_install_qdrant() {
+  dst="$RT/vector-dbs/qdrant/qdrant"
+  [ -x "$dst" ] && { echo "-> qdrant već prisutan."; return 0; }
+  ver="${QDRANT_VERSION:-1.19.1}"
+  case "$(uname -m)" in
+    x86_64)        target="x86_64-unknown-linux-gnu";;
+    aarch64|arm64) target="aarch64-unknown-linux-musl";;
+    *) echo "-> qdrant: nepoznata arhitektura $(uname -m) — preuzmi ručno."; return 1;;
+  esac
+  url="https://github.com/qdrant/qdrant/releases/download/v${ver}/qdrant-${target}.tar.gz"
+  echo "-> qdrant $ver ($target): $url"
+  command -v curl >/dev/null 2>&1 || { echo "   curl nedostaje (OS)."; return 1; }
+  tmp="$(mktemp -d)"
+  if curl -fsSL "$url" -o "$tmp/q.tar.gz"; then
+    tar -xzf "$tmp/q.tar.gz" -C "$tmp" 2>/dev/null
+    bin="$(find "$tmp" -name qdrant -type f 2>/dev/null | head -1)"
+    if [ -n "$bin" ]; then
+      mkdir -p "$RT/vector-dbs/qdrant"; cp "$bin" "$dst"; chmod +x "$dst"; echo "   ✓ qdrant instaliran."
+    else echo "   qdrant binar nije nađen u arhivi."; fi
+  else echo "   preuzimanje nije uspelo ($url)."; fi
+  rm -rf "$tmp"
 }
 
 case "$cmd" in
