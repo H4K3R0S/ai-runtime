@@ -1,12 +1,13 @@
+# build/deps (installer ih obezbedi)
 node_modules/
 dist/
 build/
 __pycache__/
+*.pyc
 *.log
-# podprojekti su zasebni repoi:
-cell-shell/
-second-brain/
-router-api/
-tools/
-vector-dbs/
-mcp-servers/
+# runtime PODACI i binari (van paketa; installer skine/izgradi)
+vector-dbs/qdrant/
+vector-dbs/global_graph_vault/
+*.db
+*.sqlite*
+*.snapshot

@@ -1,0 +1,9 @@
+{
+  "name": "router-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Deterministički Event-Driven Router (Fallthrough Protokol) za AI domene.",
+  "main": "dist/router-api/router.js",
+  "scripts": { "start": "node dist/router-api/router.js", "build": "tsc" }
+}

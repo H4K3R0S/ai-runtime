@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "updated": "2026-09-18",
+  "router": {
+    "host": "127.0.0.1",
+    "port": 4800,
+    "maxHops": 3
+  },
+  "domains": {
+    "filmium": {
+      "host": "127.0.0.1",
+      "port": 4801,
+      "capabilities": ["film", "video", "media", "youtube-script", "subtitle"],
+      "capability_synonyms": {
+        "film": ["medij", "video", "titl"]
+      }
+    },
+    "codium": {
+      "host": "127.0.0.1",
+      "port": 4802,
+      "capabilities": ["code", "dev", "exploit", "ctf", "build", "debug"],
+      "capability_synonyms": {
+        "code": ["kod", "skripta", "program"]
+      }
+    },
+    "imperium": {
+      "host": "127.0.0.1",
+      "port": 4803,
+      "capabilities": ["orchestration", "strategy", "planning", "osint"],
+      "capability_synonyms": {
+        "orchestration": ["plan", "strateg", "orkestracija"]
+      }
+    },
+    "kalima": {
+      "host": "127.0.0.1",
+      "port": 4804,
+      "capabilities": ["pentest", "recon", "target", "ip", "scan", "meta"],
+      "capability_synonyms": {
+        "recon": ["izvidjanje", "izvid", "mapiranje"],
+        "scan": ["skeniranje", "nmap", "port"]
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ai-os-second-brain",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Centralni Second Brain GUI za AI OS (orbitalni prikaz po ARMS okviru).",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "serve": "node server.mjs"
+  },
+  "dependencies": {
+    "@xyflow/react": "^12.11.6",
+    "lucide-react": "1.25.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.3",
+    "typescript": "6.0.3",
+    "vite": "8.1.5"
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {"query": "pusti film", "expect_id": "kurator-tool-plejer"},
+  {"query": "hocu da gledam film u plejeru", "expect_id": "kurator-tool-plejer"},
+  {"query": "pusti u VLC", "expect_id": "kurator-tool-plejer"},
+  {"query": "otvori stranicu filma i pokreni web plejer", "expect_id": "kurator-tool-plejer"},
+  {"query": "pretraga biblioteke filmova", "expect_id": "kurator-tool-pretraga"},
+  {"query": "nadji nesto sa Kijanuom", "expect_id": "kurator-tool-pretraga"},
+  {"query": "preporuci komediju iz 2010", "expect_id": "kurator-tool-pretraga"},
+  {"query": "filter po zanru i godini", "expect_id": "kurator-tool-pretraga"},
+  {"query": "izmeni podatak o filmu", "expect_id": "kurator-tool-izmena-info"},
+  {"query": "stavi ocenu filmu", "expect_id": "kurator-tool-izmena-info"},
+  {"query": "promeni reziseru filma", "expect_id": "kurator-tool-izmena-info"},
+  {"query": "sacuvaj izmene metapodataka", "expect_id": "kurator-tool-izmena-info"},
+  {"query": "koje komande ima filmium kurator", "expect_id": "kurator-command-katalog"},
+  {"query": "katalog komandi filmium", "expect_id": "kurator-command-katalog"},
+  {"query": "ko je filmium kurator", "expect_id": "kurator"},
+  {"query": "ekspert za filmsku biblioteku", "expect_id": "kurator"}
+]

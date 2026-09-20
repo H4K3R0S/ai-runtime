@@ -1,0 +1,22 @@
+[
+  {"query": "planiranje arhitekture i tehnoloski stek", "expect_id": "arhitekta"},
+  {"query": "bezbednosni pregled koda SQL injekcija XSS", "expect_id": "bezbednjak"},
+  {"query": "hardkodovane lozinke i API kljucevi u kodu", "expect_id": "bezbednjak"},
+  {"query": "dizajn baze podataka i SQL upiti", "expect_id": "data-engineer"},
+  {"query": "migracija seme baze i indeksi", "expect_id": "data-engineer"},
+  {"query": "otklanjanje greske i stack trace", "expect_id": "debager"},
+  {"query": "pronadji uzrok kvara u kodu root cause", "expect_id": "debager"},
+  {"query": "Docker i CI/CD pajplajn", "expect_id": "devops"},
+  {"query": "UI dizajn i korisnicki interfejs", "expect_id": "dizajner"},
+  {"query": "generisanje cistog koda", "expect_id": "graditelj"},
+  {"query": "pisi kod po SOLID principima", "expect_id": "graditelj"},
+  {"query": "organizacija zadataka i to-do lista", "expect_id": "menadzer"},
+  {"query": "opsta pomoc oko koda i alata", "expect_id": "opsti"},
+  {"query": "tehnicka dokumentacija README", "expect_id": "pisac"},
+  {"query": "kod rivju i kritika koda pre mergea", "expect_id": "recenzent"},
+  {"query": "jedinicni i end-to-end testovi", "expect_id": "tester"},
+  {"query": "pokreni pipeline", "expect_id": "codium-tool-pipeline"},
+  {"query": "lista repozitorijuma", "expect_id": "codium-tool-repo"},
+  {"query": "sync repozitorijuma pull", "expect_id": "codium-tool-repo"},
+  {"query": "katalog komandi codium", "expect_id": "codium-command-katalog"}
+]

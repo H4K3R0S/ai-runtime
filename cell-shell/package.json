@@ -1,0 +1,10 @@
+{
+  "name": "cell-shell",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generički Electron (Chromium) frameless prozor za AI ćelije — zamena za WebKit2GTK na Linuxu.",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "33.4.11"
+  }
+}

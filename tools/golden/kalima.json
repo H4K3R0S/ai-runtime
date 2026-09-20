@@ -1,0 +1,20 @@
+[
+  {"query": "kako da skeniram fajl", "expect_id": "kalima-tool-scan"},
+  {"query": "skener fajlova heuristike ekstenzije", "expect_id": "kalima-tool-scan"},
+  {"query": "provera SHA256 heša", "expect_id": "kalima-tool-hash"},
+  {"query": "hash provera protiv baze malvera", "expect_id": "kalima-tool-hash"},
+  {"query": "izoluj sumnjivi fajl u karantin", "expect_id": "kalima-tool-quarantine"},
+  {"query": "karantin fajlova", "expect_id": "kalima-tool-quarantine"},
+  {"query": "koje komande ima kalima", "expect_id": "kalima-command-katalog"},
+  {"query": "katalog komandi kalima", "expect_id": "kalima-command-katalog"},
+  {"query": "ko analizira malver", "expect_id": "analiticar-malvera"},
+  {"query": "statička trijaža uzoraka malvera", "expect_id": "analiticar-malvera"},
+  {"query": "digitalna forenzika i lanac dokaza", "expect_id": "forenzicar"},
+  {"query": "očuvanje dokaza i integritet artefakata", "expect_id": "forenzicar"},
+  {"query": "pasivno izviđanje mreže", "expect_id": "izvidjac"},
+  {"query": "mapiranje površine napada", "expect_id": "izvidjac"},
+  {"query": "SOC komandant orkestrator", "expect_id": "komandant"},
+  {"query": "vrhovni operativni centar", "expect_id": "komandant"},
+  {"query": "SOC analitičar monitoring incidenata", "expect_id": "soc-analiticar"},
+  {"query": "praćenje incidenta i IoC", "expect_id": "soc-analiticar"}
+]
